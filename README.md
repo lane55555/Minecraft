@@ -20,3 +20,7 @@ src\main\java\ca\lanewelch\minecrafttweaks
 (This file holds all the code that creates the custom items)
 The main item code is found in:
 src\main\java\ca\lanewelch\minecrafttweaks\init
+
+(Gives the custom items their display name)
+The en_us.json file is held in:
+src\main\resources\assets\minecrafttweaks\lang
