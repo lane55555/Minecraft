@@ -1,4 +1,4 @@
-# Minecraft
+# Minecraft Tweaks
 I will continue to update this page to share my files with you. I have only added the 'src' folder because it holds all the contents I have edited/added personally. I also included a LICENSE.txt file, a .mp4 file with gameplay of my mod, and a .jar file of my mod.
 
 ****Any comments in my code marked with (Automatic) means the code next to it (or directly below it), is in the file by default and I did not write it****
