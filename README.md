@@ -5,7 +5,7 @@ I will continue to update this page to share my files with you. I have only adde
 
 (The folder that holds all the custom recipes)
 Item recipes are found in:
-/src/main/resources/data/minecrafttweaks/recipes/
+src/main/resources/data/minecrafttweaks/recipes/
 
 (The folder that holds all the pngs for the items)
 Item pngs are found in:
