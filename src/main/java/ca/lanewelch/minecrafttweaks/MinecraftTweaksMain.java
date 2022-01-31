@@ -2,10 +2,8 @@ package ca.lanewelch.minecrafttweaks;
 
 import ca.lanewelch.minecrafttweaks.init.ItemInit;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -13,8 +11,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -47,16 +45,19 @@ public class MinecraftTweaksMain
         ItemInit.ITEMS.register(modEventBus);
     }
 
+    //Sets a void class for 'setup'
     private void setup(final FMLCommonSetupEvent event) {
 
     }
 
+    // (Automatic)
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-        // some example code to dispatch IMC to another mod (automatic)
+        // some example code to dispatch IMC to another mod (Automatic)
         InterModComms.sendTo("minecrafttweaks", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
+    // (Automatic)
     private void processIMC(final InterModProcessEvent event)
     {
         // some example code to receive and process InterModComms from other mods (automatic)
@@ -64,14 +65,8 @@ public class MinecraftTweaksMain
                 map(m->m.messageSupplier().get()).
                 collect(Collectors.toList()));
     }
-    // (automatic)
-    @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event) {
-        // do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
 
-    // (automatic)
+    // (Automatic)
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
